@@ -1,0 +1,46 @@
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    # Create circular linked list
+    def append(self, data):
+        new_node = Node(data)
+
+        if self.head is None:
+            self.head = new_node
+            new_node.next = self.head
+        else:
+            temp = self.head
+            while temp.next != self.head:
+                temp = temp.next
+
+            temp.next = new_node
+            new_node.next = self.head
+
+    # Display linked list
+    def display(self):
+        if self.head is None:
+            print("List is empty")
+            return
+
+        temp = self.head
+        while True:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+            if temp == self.head:
+                break
+        print("(back to head)")
+
+
+list1 = LinkedList()
+list1.append(30)
+list1.append(40)
+list1.display()
+
