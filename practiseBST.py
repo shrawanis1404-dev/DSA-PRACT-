@@ -55,6 +55,10 @@ class BST:
               while temp.right:
                     temp=temp.right
               print("\nMaximum value :",temp.data)
+
+
+        
+
 b1=BST()
 b1.insert(Node(45))
 b1.insert(Node(243))
