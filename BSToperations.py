@@ -54,9 +54,9 @@ class BST:
             if rt is None:
                 return
             else:
-                self.inorder(rt.right)
+                self.descending(rt.right)
                 print(rt.data,end=" ")
-                self.inorder(rt.left)
+                self.descending(rt.left)
     def minimum(self):
         temp=self.root
         while temp.left:

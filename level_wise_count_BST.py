@@ -74,4 +74,5 @@ b1.insert(Node(874))
 
 
 b1.level_order(b1.root)
+
 print("Height of BST:",b1.height(b1.root))
